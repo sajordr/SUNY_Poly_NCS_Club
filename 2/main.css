@@ -1,0 +1,138 @@
+* {
+    font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
+
+#afterNav {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+}
+
+/*
+Poly Orange: #ffc02e
+Poly Blue: #aaccff
+Poly Dark Blue: #002c73
+Poly Black: #000000
+Poly White: #ffffff
+
+*/
+
+:root {
+    --poly-orange: #ffc02e;
+    --poly-blue: #aaccff;
+    --poly-dark-blue: #002c73;
+    --poly-black: #000000;
+    --poly-white: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: var(--poly-dark-blue);
+}
+
+/* Header layout */
+.header-container {
+    padding: 0;
+    margin: 0;
+    position: fixed; /* Change from absolute to fixed */
+    top: 0; /* Position at the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    width: 100vw; /* Full viewport width */
+    display: flex;
+    justify-content: center; /* Center the nav bar */
+    align-items: center;
+    padding: 10px 0;
+    font-size: 1.2em;
+    background-color: var(--poly-dark-blue);
+    color: rgb(0, 0, 0);
+}
+
+p {
+    font-size: max(1.2rem, 2vmin);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: max(1.2rem, 4vmin);
+}
+
+/* Logo styling */
+.logo {
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+/* Navigation bar */
+#navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center the text */
+    width: 100%; /* Match body width */
+}
+
+#navBar li {
+    display: inline-block;
+    margin: 0 20px; /* Even spacing between items */
+}
+
+#navBar a {
+    text-decoration: none;
+    color: var(--poly-white); /* Make links white for better contrast against dark blue */
+}
+
+#navBar a:hover {
+    color: var(--poly-orange); /* Orange hover for better visibility */
+}
+
+/* Main content layout */
+#main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px; /* Add enough space for the fixed header plus some padding */
+}
+
+#mainLogo {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainInfo {
+    flex-basis: 60%;
+    text-align: left;
+}
+
+#mainInfo h1, #mainInfo p {
+    text-align: left;
+}
+
+/* Footer styling */
+footer {
+    position: absolute;
+    width: 100vw;
+    background-color: var(--poly-dark-blue);
+    color: var(--poly-white);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
