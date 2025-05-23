@@ -26,14 +26,20 @@ Poly White: #ffffff
 
 :root {
     --poly-orange: #ffc02e;
-    --poly-blue: #aaccff;
+    --poly-blue: #0062ff;
     --poly-dark-blue: #002c73;
     --poly-black: #000000;
     --poly-white: #ffffff;
+    --off-white: #d3c5ab;
 }
 
 h1, h2, h3, h4, h5, h6, p {
     color: var(--poly-dark-blue);
+}
+
+.light {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 /* Header layout */
@@ -47,18 +53,22 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     justify-content: center; /* Center the nav bar */
     align-items: center;
-    padding: 10px 0;
-    font-size: 1.2em;
+    padding: 20px 0;
+    font-size: 1.8em;
     background-color: var(--poly-dark-blue);
     color: rgb(0, 0, 0);
 }
 
 p {
-    font-size: max(1.2rem, 2vmin);
+    font-size: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-size: max(1.2rem, 4vmin);
+    font-size: 5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
 }
 
 /* Logo styling */
@@ -98,11 +108,30 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--poly-orange); /* Orange hover for better visibility */
 }
 
+#header {
+    margin: 0;
+    margin-top: 60px;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+#header h1 {
+    font-size: 8em;
+    margin: 0;
+    color: var(--poly-dark-blue);
+}
+#header h2 {
+    font-size: 5em;
+    margin: 0;
+    color: var(--poly-dark-blue);
+}
+
 /* Main content layout */
 #main-content {
     display: flex;
     justify-content: space-between;
     margin-top: 70px; /* Add enough space for the fixed header plus some padding */
+    margin-bottom: 16em;
 }
 
 #mainLogo {
@@ -121,6 +150,34 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
 }
 
+#h2Attendance {
+    margin-bottom: 1rem;
+}
+
+#officers h3 {
+    padding: 1.8rem;
+    font-size: 3rem;
+}
+
+#events p {
+    margin-bottom: 50rem;
+}
+
+#beforeFooter {
+    margin-bottom: 20rem;
+}
+
+#contact p {
+    font-size: 2.8rem;
+    margin-bottom: 8rem;
+}
+
+#contact h4 {
+    font-size: 4rem;
+}
+
+
+
 /* Footer styling */
 footer {
     position: absolute;
@@ -133,6 +190,35 @@ footer {
 }
 
 footer p {
+    color: var(--poly-white);
     margin: 0;
     text-align: center;
+}
+
+/* Base styles */
+html {
+    scroll-padding-top: 75px; /* Add scroll padding to account for fixed header */
+}
+
+/* Social media icons */
+#social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem auto;
+}
+
+#social-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#social-links img {
+    transition: transform 0.3s ease;
+}
+
+#social-links img:hover {
+    transform: scale(1.2);
 }
